@@ -1,11 +1,9 @@
 module.exports = function solveEquation(equation) {
-  // your implementation
-  let pattern = /-?\s?\d+/g;
-
+  const pattern = /-?\s?\d+/g;
+  const numbers = [];
   let numbersAsString = equation.match(pattern);
-  let numbers = [];
 
-  for(let i = 0; i < numbersAsString.length; i++){
+  for(let i = 0, len = numbersAsString.length; i < len; i++){
     numbers.push(numbersAsString[i].replace(/\s+/g, ''));
   }
 
