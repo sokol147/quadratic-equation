@@ -11,14 +11,12 @@ module.exports = function solveEquation(equation) {
   let b = numbers[2];
   let c = numbers[3];
 
-  let discriminant = Math.pow(b,2) - 4 * a * c;
+  const D = Math.pow(b,2) - 4 * a * c;
 
-  let xOne = (- b + Math.sqrt(discriminant)) / (2 * a);
-  let xTwo = (- b - Math.sqrt(discriminant)) / (2 * a);
+  const xOne = (- b + Math.sqrt(D)) / (2 * a);
+  const xTwo = (- b - Math.sqrt(D)) / (2 * a);
 
-  let result = [Math.round(xOne),Math.round(xTwo)];
+  const result = [Math.round(xOne),Math.round(xTwo)];
 
-  result.sort(function(x,y){return x - y});
-
-  return result;
+  return result.sort(function(x,y){return x - y});;
 }
